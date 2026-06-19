@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     createRevenueChart();
     createFunnelChart();
     createChannelChart();
+    createSalesPerformanceChart();
+    createLeadSourceChart();
   }, 500);
 });
 

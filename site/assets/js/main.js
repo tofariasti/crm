@@ -72,6 +72,12 @@ function setupWhatsAppModal() {
     openModal();
   });
 
+  const newLeadBtn2 = document.getElementById('newLeadBtn2');
+  newLeadBtn2?.addEventListener('click', (e) => {
+    e.preventDefault();
+    openModal();
+  });
+
   modalClose?.addEventListener('click', closeModal);
   modalOverlay?.addEventListener('click', closeModal);
 

@@ -326,6 +326,706 @@
           </div>
         </div>
       </section>
+
+      <section class="page-section" data-page="leads">
+        <div class="page-header">
+          <div>
+            <h2 class="page-title">Leads</h2>
+            <p class="page-subtitle">Gerencie e converta seus leads em clientes</p>
+          </div>
+          <button class="btn btn-primary" id="newLeadBtn2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Novo Lead
+          </button>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="todos">Todos (247)</button>
+            <button class="filter-btn" data-filter="novos">Novos (89)</button>
+            <button class="filter-btn" data-filter="contato">Em contato (112)</button>
+            <button class="filter-btn" data-filter="qualificado">Qualificados (46)</button>
+          </div>
+          <div class="search-input-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input type="search" placeholder="Buscar leads..." class="search-input">
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Origem</th>
+                <th>Status</th>
+                <th>Data</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Ana Silva</strong></td>
+                <td>ana.silva@email.com</td>
+                <td>(51) 99123-4567</td>
+                <td><span class="badge badge-success">WhatsApp</span></td>
+                <td><span class="status-badge status-new">Novo</span></td>
+                <td>19/06/2026</td>
+                <td>
+                  <button class="icon-btn-small" title="Ver detalhes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                  <button class="icon-btn-small" title="Editar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Carlos Santos</strong></td>
+                <td>carlos.santos@empresa.com</td>
+                <td>(51) 98765-4321</td>
+                <td><span class="badge badge-info">Google</span></td>
+                <td><span class="status-badge status-contact">Em contato</span></td>
+                <td>18/06/2026</td>
+                <td>
+                  <button class="icon-btn-small" title="Ver detalhes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                  <button class="icon-btn-small" title="Editar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Maria Oliveira</strong></td>
+                <td>maria.oliveira@email.com</td>
+                <td>(51) 99876-5432</td>
+                <td><span class="badge badge-warning">Instagram</span></td>
+                <td><span class="status-badge status-qualified">Qualificado</span></td>
+                <td>17/06/2026</td>
+                <td>
+                  <button class="icon-btn-small" title="Ver detalhes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                  <button class="icon-btn-small" title="Editar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>João Pereira</strong></td>
+                <td>joao.pereira@empresa.com</td>
+                <td>(51) 99234-5678</td>
+                <td><span class="badge badge-primary">Facebook</span></td>
+                <td><span class="status-badge status-new">Novo</span></td>
+                <td>16/06/2026</td>
+                <td>
+                  <button class="icon-btn-small" title="Ver detalhes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                  <button class="icon-btn-small" title="Editar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Patricia Costa</strong></td>
+                <td>patricia.costa@email.com</td>
+                <td>(51) 98123-4567</td>
+                <td><span class="badge badge-success">WhatsApp</span></td>
+                <td><span class="status-badge status-contact">Em contato</span></td>
+                <td>15/06/2026</td>
+                <td>
+                  <button class="icon-btn-small" title="Ver detalhes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                  <button class="icon-btn-small" title="Editar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <button class="pagination-btn" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Anterior
+          </button>
+          <div class="pagination-info">Página 1 de 5</div>
+          <button class="pagination-btn">
+            Próxima
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="page-section" data-page="vendas">
+        <div class="page-header">
+          <div>
+            <h2 class="page-title">Vendas</h2>
+            <p class="page-subtitle">Acompanhe e gerencie suas vendas</p>
+          </div>
+          <button class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Nova Venda
+          </button>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card-mini">
+            <div class="stat-card-mini__icon stat-icon-success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <span class="stat-card-mini__label">Vendas Fechadas</span>
+              <span class="stat-card-mini__value">156</span>
+            </div>
+          </div>
+
+          <div class="stat-card-mini">
+            <div class="stat-card-mini__icon stat-icon-warning">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div>
+              <span class="stat-card-mini__label">Em Negociação</span>
+              <span class="stat-card-mini__value">42</span>
+            </div>
+          </div>
+
+          <div class="stat-card-mini">
+            <div class="stat-card-mini__icon stat-icon-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <div>
+              <span class="stat-card-mini__label">Ticket Médio</span>
+              <span class="stat-card-mini__value">R$ 8.450</span>
+            </div>
+          </div>
+
+          <div class="stat-card-mini">
+            <div class="stat-card-mini__icon stat-icon-info">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <span class="stat-card-mini__label">Taxa Conversão</span>
+              <span class="stat-card-mini__value">68%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sales-pipeline">
+          <h3 class="section-subtitle">Pipeline de Vendas</h3>
+          <div class="pipeline-stages">
+            <div class="pipeline-stage">
+              <div class="pipeline-stage__header">
+                <h4>Prospecção</h4>
+                <span class="pipeline-stage__count">23</span>
+              </div>
+              <div class="pipeline-cards">
+                <div class="pipeline-card">
+                  <div class="pipeline-card__header">
+                    <strong>Empresa ABC</strong>
+                    <span class="pipeline-card__value">R$ 15.000</span>
+                  </div>
+                  <p>Software de gestão</p>
+                  <span class="pipeline-card__date">Há 2 dias</span>
+                </div>
+                <div class="pipeline-card">
+                  <div class="pipeline-card__header">
+                    <strong>Tech Solutions</strong>
+                    <span class="pipeline-card__value">R$ 8.500</span>
+                  </div>
+                  <p>Consultoria</p>
+                  <span class="pipeline-card__date">Há 5 dias</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pipeline-stage">
+              <div class="pipeline-stage__header">
+                <h4>Qualificação</h4>
+                <span class="pipeline-stage__count">18</span>
+              </div>
+              <div class="pipeline-cards">
+                <div class="pipeline-card">
+                  <div class="pipeline-card__header">
+                    <strong>Indústria XYZ</strong>
+                    <span class="pipeline-card__value">R$ 25.000</span>
+                  </div>
+                  <p>Sistema ERP</p>
+                  <span class="pipeline-card__date">Há 1 dia</span>
+                </div>
+                <div class="pipeline-card">
+                  <div class="pipeline-card__header">
+                    <strong>Varejo Plus</strong>
+                    <span class="pipeline-card__value">R$ 12.000</span>
+                  </div>
+                  <p>E-commerce</p>
+                  <span class="pipeline-card__date">Há 3 dias</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pipeline-stage">
+              <div class="pipeline-stage__header">
+                <h4>Proposta</h4>
+                <span class="pipeline-stage__count">12</span>
+              </div>
+              <div class="pipeline-cards">
+                <div class="pipeline-card">
+                  <div class="pipeline-card__header">
+                    <strong>Comércio Online</strong>
+                    <span class="pipeline-card__value">R$ 18.000</span>
+                  </div>
+                  <p>Marketplace</p>
+                  <span class="pipeline-card__date">Hoje</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pipeline-stage">
+              <div class="pipeline-stage__header">
+                <h4>Negociação</h4>
+                <span class="pipeline-stage__count">8</span>
+              </div>
+              <div class="pipeline-cards">
+                <div class="pipeline-card">
+                  <div class="pipeline-card__header">
+                    <strong>Startup Tech</strong>
+                    <span class="pipeline-card__value">R$ 30.000</span>
+                  </div>
+                  <p>Plataforma SaaS</p>
+                  <span class="pipeline-card__date">Há 1 hora</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pipeline-stage pipeline-stage--success">
+              <div class="pipeline-stage__header">
+                <h4>Fechado</h4>
+                <span class="pipeline-stage__count">156</span>
+              </div>
+              <div class="pipeline-cards">
+                <div class="pipeline-card pipeline-card--won">
+                  <div class="pipeline-card__header">
+                    <strong>Empresa Beta</strong>
+                    <span class="pipeline-card__value">R$ 22.000</span>
+                  </div>
+                  <p>CRM customizado</p>
+                  <span class="pipeline-card__date">Há 2 horas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" data-page="clientes">
+        <div class="page-header">
+          <div>
+            <h2 class="page-title">Clientes</h2>
+            <p class="page-subtitle">Gerencie seu portfólio de clientes</p>
+          </div>
+          <button class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Novo Cliente
+          </button>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="todos">Todos (1.543)</button>
+            <button class="filter-btn" data-filter="ativos">Ativos (1.287)</button>
+            <button class="filter-btn" data-filter="inativos">Inativos (256)</button>
+          </div>
+          <div class="search-input-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input type="search" placeholder="Buscar clientes..." class="search-input">
+          </div>
+        </div>
+
+        <div class="clients-grid">
+          <div class="client-card">
+            <div class="client-card__header">
+              <div class="client-avatar">AB</div>
+              <div class="client-info">
+                <h4>Acme Brasil Ltda</h4>
+                <p>acme@brasil.com.br</p>
+              </div>
+            </div>
+            <div class="client-card__stats">
+              <div class="client-stat">
+                <span class="client-stat__label">Vendas</span>
+                <span class="client-stat__value">R$ 45.000</span>
+              </div>
+              <div class="client-stat">
+                <span class="client-stat__label">Desde</span>
+                <span class="client-stat__value">Jan/2025</span>
+              </div>
+            </div>
+            <div class="client-card__footer">
+              <span class="status-badge status-active">Ativo</span>
+              <button class="btn btn-outline btn-sm">Ver perfil</button>
+            </div>
+          </div>
+
+          <div class="client-card">
+            <div class="client-card__header">
+              <div class="client-avatar" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">TS</div>
+              <div class="client-info">
+                <h4>Tech Solutions</h4>
+                <p>contato@techsolutions.com</p>
+              </div>
+            </div>
+            <div class="client-card__stats">
+              <div class="client-stat">
+                <span class="client-stat__label">Vendas</span>
+                <span class="client-stat__value">R$ 78.500</span>
+              </div>
+              <div class="client-stat">
+                <span class="client-stat__label">Desde</span>
+                <span class="client-stat__value">Mar/2024</span>
+              </div>
+            </div>
+            <div class="client-card__footer">
+              <span class="status-badge status-active">Ativo</span>
+              <button class="btn btn-outline btn-sm">Ver perfil</button>
+            </div>
+          </div>
+
+          <div class="client-card">
+            <div class="client-card__header">
+              <div class="client-avatar" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">IX</div>
+              <div class="client-info">
+                <h4>Indústria XYZ</h4>
+                <p>comercial@industriaxyz.com.br</p>
+              </div>
+            </div>
+            <div class="client-card__stats">
+              <div class="client-stat">
+                <span class="client-stat__label">Vendas</span>
+                <span class="client-stat__value">R$ 125.000</span>
+              </div>
+              <div class="client-stat">
+                <span class="client-stat__label">Desde</span>
+                <span class="client-stat__value">Jun/2023</span>
+              </div>
+            </div>
+            <div class="client-card__footer">
+              <span class="status-badge status-active">Ativo</span>
+              <button class="btn btn-outline btn-sm">Ver perfil</button>
+            </div>
+          </div>
+
+          <div class="client-card">
+            <div class="client-card__header">
+              <div class="client-avatar" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">VP</div>
+              <div class="client-info">
+                <h4>Varejo Plus</h4>
+                <p>vendas@varejoplus.com</p>
+              </div>
+            </div>
+            <div class="client-card__stats">
+              <div class="client-stat">
+                <span class="client-stat__label">Vendas</span>
+                <span class="client-stat__value">R$ 32.000</span>
+              </div>
+              <div class="client-stat">
+                <span class="client-stat__label">Desde</span>
+                <span class="client-stat__value">Ago/2025</span>
+              </div>
+            </div>
+            <div class="client-card__footer">
+              <span class="status-badge status-active">Ativo</span>
+              <button class="btn btn-outline btn-sm">Ver perfil</button>
+            </div>
+          </div>
+
+          <div class="client-card">
+            <div class="client-card__header">
+              <div class="client-avatar" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">CO</div>
+              <div class="client-info">
+                <h4>Comércio Online</h4>
+                <p>contato@comercioonline.com</p>
+              </div>
+            </div>
+            <div class="client-card__stats">
+              <div class="client-stat">
+                <span class="client-stat__label">Vendas</span>
+                <span class="client-stat__value">R$ 18.000</span>
+              </div>
+              <div class="client-stat">
+                <span class="client-stat__label">Desde</span>
+                <span class="client-stat__value">Nov/2025</span>
+              </div>
+            </div>
+            <div class="client-card__footer">
+              <span class="status-badge status-active">Ativo</span>
+              <button class="btn btn-outline btn-sm">Ver perfil</button>
+            </div>
+          </div>
+
+          <div class="client-card">
+            <div class="client-card__header">
+              <div class="client-avatar" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">ST</div>
+              <div class="client-info">
+                <h4>Startup Tech</h4>
+                <p>hello@startuptech.io</p>
+              </div>
+            </div>
+            <div class="client-card__stats">
+              <div class="client-stat">
+                <span class="client-stat__label">Vendas</span>
+                <span class="client-stat__value">R$ 95.000</span>
+              </div>
+              <div class="client-stat">
+                <span class="client-stat__label">Desde</span>
+                <span class="client-stat__value">Fev/2024</span>
+              </div>
+            </div>
+            <div class="client-card__footer">
+              <span class="status-badge status-active">Ativo</span>
+              <button class="btn btn-outline btn-sm">Ver perfil</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" data-page="relatorios">
+        <div class="page-header">
+          <div>
+            <h2 class="page-title">Relatórios</h2>
+            <p class="page-subtitle">Análises e insights do seu negócio</p>
+          </div>
+          <button class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Exportar PDF
+          </button>
+        </div>
+
+        <div class="report-filters">
+          <select class="report-select">
+            <option>Últimos 7 dias</option>
+            <option>Últimos 30 dias</option>
+            <option selected>Últimos 6 meses</option>
+            <option>Últimos 12 meses</option>
+            <option>Este ano</option>
+          </select>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="chart-card large">
+            <div class="card-header">
+              <h3 class="card-title">Desempenho de Vendas</h3>
+            </div>
+            <div class="card-body">
+              <canvas id="salesPerformanceChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="card-header">
+              <h3 class="card-title">Top Produtos/Serviços</h3>
+            </div>
+            <div class="card-body">
+              <div class="ranking-list">
+                <div class="ranking-item">
+                  <span class="ranking-position">1</span>
+                  <div class="ranking-info">
+                    <strong>Software de Gestão</strong>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                  </div>
+                  <span class="ranking-value">R$ 285k</span>
+                </div>
+                <div class="ranking-item">
+                  <span class="ranking-position">2</span>
+                  <div class="ranking-info">
+                    <strong>Consultoria</strong>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 72%"></div>
+                    </div>
+                  </div>
+                  <span class="ranking-value">R$ 198k</span>
+                </div>
+                <div class="ranking-item">
+                  <span class="ranking-position">3</span>
+                  <div class="ranking-info">
+                    <strong>E-commerce</strong>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 65%"></div>
+                    </div>
+                  </div>
+                  <span class="ranking-value">R$ 156k</span>
+                </div>
+                <div class="ranking-item">
+                  <span class="ranking-position">4</span>
+                  <div class="ranking-info">
+                    <strong>Treinamentos</strong>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 48%"></div>
+                    </div>
+                  </div>
+                  <span class="ranking-value">R$ 89k</span>
+                </div>
+                <div class="ranking-item">
+                  <span class="ranking-position">5</span>
+                  <div class="ranking-info">
+                    <strong>Suporte Técnico</strong>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 35%"></div>
+                    </div>
+                  </div>
+                  <span class="ranking-value">R$ 65k</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-card large">
+            <div class="card-header">
+              <h3 class="card-title">Origem dos Leads</h3>
+            </div>
+            <div class="card-body">
+              <canvas id="leadSourceChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="card-header">
+              <h3 class="card-title">Métricas Principais</h3>
+            </div>
+            <div class="card-body">
+              <div class="metrics-list">
+                <div class="metric-item">
+                  <div class="metric-icon" style="background: rgba(99, 102, 241, 0.2);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="8.5" cy="7" r="4"></circle>
+                      <line x1="20" y1="8" x2="20" y2="14"></line>
+                      <line x1="23" y1="11" x2="17" y2="11"></line>
+                    </svg>
+                  </div>
+                  <div class="metric-content">
+                    <span class="metric-label">Novos Leads</span>
+                    <span class="metric-value">247</span>
+                    <span class="metric-trend positive">+23%</span>
+                  </div>
+                </div>
+
+                <div class="metric-item">
+                  <div class="metric-icon" style="background: rgba(16, 185, 129, 0.2);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="metric-content">
+                    <span class="metric-label">Taxa Conversão</span>
+                    <span class="metric-value">68%</span>
+                    <span class="metric-trend positive">+5%</span>
+                  </div>
+                </div>
+
+                <div class="metric-item">
+                  <div class="metric-icon" style="background: rgba(245, 158, 11, 0.2);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="12" y1="1" x2="12" y2="23"></line>
+                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                  </div>
+                  <div class="metric-content">
+                    <span class="metric-label">Ticket Médio</span>
+                    <span class="metric-value">R$ 8.450</span>
+                    <span class="metric-trend positive">+12%</span>
+                  </div>
+                </div>
+
+                <div class="metric-item">
+                  <div class="metric-icon" style="background: rgba(59, 130, 246, 0.2);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div class="metric-content">
+                    <span class="metric-label">Ciclo de Venda</span>
+                    <span class="metric-value">18 dias</span>
+                    <span class="metric-trend negative">-3 dias</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 
