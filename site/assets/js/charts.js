@@ -3,9 +3,21 @@ document.addEventListener('DOMContentLoaded', () => {
     createRevenueChart();
     createFunnelChart();
     createChannelChart();
-    createSalesPerformanceChart();
-    createLeadSourceChart();
+    createTeamPerformanceChart();
   }, 500);
+  
+  const navItems = document.querySelectorAll('.nav-item');
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const targetPage = item.dataset.nav;
+      if (targetPage === 'relatorios') {
+        setTimeout(() => {
+          createSalesPerformanceChart();
+          createLeadSourceChart();
+        }, 300);
+      }
+    });
+  });
 });
 
 function createRevenueChart() {

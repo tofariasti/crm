@@ -21,6 +21,13 @@ function setupNavigation() {
       if (targetSection) {
         targetSection.classList.add('active');
       }
+
+      if (targetPage === 'relatorios') {
+        setTimeout(() => {
+          if (window.createSalesPerformanceChart) window.createSalesPerformanceChart();
+          if (window.createLeadSourceChart) window.createLeadSourceChart();
+        }, 300);
+      }
     });
   });
 }

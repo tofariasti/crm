@@ -602,10 +602,11 @@ body {
   padding: 1.5rem;
   grid-column: span 4;
   transition: var(--transition);
+  min-height: 350px;
 }
 
 .chart-card.large {
-  grid-column: span 8;
+  grid-column: span 6;
 }
 
 .chart-card:hover {
@@ -619,7 +620,7 @@ body {
   border: 1px solid rgba(99, 102, 241, 0.2);
   border-radius: var(--radius);
   padding: 1.5rem;
-  grid-column: span 4;
+  grid-column: span 6;
   transition: var(--transition);
 }
 
