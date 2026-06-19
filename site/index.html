@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM Pro - Dashboard de Gestão de Clientes</title>
+  <meta name="description" content="Sistema CRM profissional para gestão de leads, vendas e relacionamento com clientes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="particles" id="particles"></div>
+  
+  <nav class="sidebar" id="sidebar">
+    <div class="logo-container">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+      </div>
+      <h1 class="logo-text">CRM Pro</h1>
+    </div>
+    
+    <ul class="nav-menu">
+      <li class="nav-item active" data-nav="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>Dashboard</span>
+      </li>
+      <li class="nav-item" data-nav="leads">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="8.5" cy="7" r="4"></circle>
+          <line x1="20" y1="8" x2="20" y2="14"></line>
+          <line x1="23" y1="11" x2="17" y2="11"></line>
+        </svg>
+        <span>Leads</span>
+      </li>
+      <li class="nav-item" data-nav="vendas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="1" x2="12" y2="23"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+        <span>Vendas</span>
+      </li>
+      <li class="nav-item" data-nav="clientes">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <span>Clientes</span>
+      </li>
+      <li class="nav-item" data-nav="relatorios">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="20" x2="18" y2="10"></line>
+          <line x1="12" y1="20" x2="12" y2="4"></line>
+          <line x1="6" y1="20" x2="6" y2="14"></line>
+        </svg>
+        <span>Relatórios</span>
+      </li>
+    </ul>
+    
+    <div class="sidebar-footer">
+      <div class="user-profile">
+        <div class="user-avatar">TF</div>
+        <div class="user-info">
+          <span class="user-name">Tiago Farias</span>
+          <span class="user-role">Admin</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content" id="mainContent">
+    <header class="top-bar">
+      <button class="menu-toggle" id="menuToggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      
+      <div class="search-bar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input type="search" placeholder="Buscar clientes, vendas, leads...">
+      </div>
+      
+      <div class="top-bar-actions">
+        <button class="icon-btn notification-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+          <span class="badge">3</span>
+        </button>
+        <button class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 16v-4"></path>
+            <path d="M12 8h.01"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      <section class="page-section active" data-page="dashboard">
+        <div class="page-header">
+          <div>
+            <h2 class="page-title">Dashboard</h2>
+            <p class="page-subtitle">Visão geral do seu negócio em tempo real</p>
+          </div>
+          <button class="btn btn-primary" id="newLeadBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Novo Lead
+          </button>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card" data-animate="fade-up">
+            <div class="stat-icon stat-icon-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <line x1="20" y1="8" x2="20" y2="14"></line>
+                <line x1="23" y1="11" x2="17" y2="11"></line>
+              </svg>
+            </div>
+            <div class="stat-content">
+              <span class="stat-label">Novos Leads</span>
+              <span class="stat-value" data-counter="247">0</span>
+              <span class="stat-change positive">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                +23% este mês
+              </span>
+            </div>
+          </div>
+
+          <div class="stat-card" data-animate="fade-up" data-delay="100">
+            <div class="stat-icon stat-icon-success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <div class="stat-content">
+              <span class="stat-label">Receita Total</span>
+              <span class="stat-value">R$ <span data-counter="187">0</span>k</span>
+              <span class="stat-change positive">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                +18% este mês
+              </span>
+            </div>
+          </div>
+
+          <div class="stat-card" data-animate="fade-up" data-delay="200">
+            <div class="stat-icon stat-icon-warning">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <div class="stat-content">
+              <span class="stat-label">Taxa de Conversão</span>
+              <span class="stat-value" data-counter="68">0</span><span class="stat-value">%</span>
+              <span class="stat-change positive">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                +5% este mês
+              </span>
+            </div>
+          </div>
+
+          <div class="stat-card" data-animate="fade-up" data-delay="300">
+            <div class="stat-icon stat-icon-info">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="stat-content">
+              <span class="stat-label">Clientes Ativos</span>
+              <span class="stat-value" data-counter="1543">0</span>
+              <span class="stat-change positive">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                +12% este mês
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="chart-card large" data-animate="fade-up">
+            <div class="card-header">
+              <h3 class="card-title">Receita Mensal</h3>
+              <select class="chart-period">
+                <option>Últimos 6 meses</option>
+                <option>Últimos 12 meses</option>
+                <option>Este ano</option>
+              </select>
+            </div>
+            <div class="card-body">
+              <canvas id="revenueChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card" data-animate="fade-up" data-delay="100">
+            <div class="card-header">
+              <h3 class="card-title">Funil de Vendas</h3>
+            </div>
+            <div class="card-body">
+              <canvas id="funnelChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card" data-animate="fade-up" data-delay="200">
+            <div class="card-header">
+              <h3 class="card-title">Conversão por Canal</h3>
+            </div>
+            <div class="card-body">
+              <canvas id="channelChart"></canvas>
+            </div>
+          </div>
+
+          <div class="activity-card" data-animate="fade-up" data-delay="300">
+            <div class="card-header">
+              <h3 class="card-title">Atividades Recentes</h3>
+              <a href="#" class="link-primary">Ver todas</a>
+            </div>
+            <div class="card-body">
+              <div class="activity-list">
+                <div class="activity-item">
+                  <div class="activity-icon activity-icon-success">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="activity-content">
+                    <p class="activity-title"><strong>João Silva</strong> fechou uma venda</p>
+                    <span class="activity-time">2 min atrás</span>
+                  </div>
+                  <span class="activity-value">R$ 12.500</span>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon activity-icon-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="8.5" cy="7" r="4"></circle>
+                      <line x1="20" y1="8" x2="20" y2="14"></line>
+                      <line x1="23" y1="11" x2="17" y2="11"></line>
+                    </svg>
+                  </div>
+                  <div class="activity-content">
+                    <p class="activity-title">Novo lead capturado</p>
+                    <span class="activity-time">15 min atrás</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon activity-icon-warning">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                      <line x1="12" y1="9" x2="12" y2="13"></line>
+                      <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                  </div>
+                  <div class="activity-content">
+                    <p class="activity-title">Follow-up pendente com <strong>Maria Santos</strong></p>
+                    <span class="activity-time">1 hora atrás</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon activity-icon-info">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </div>
+                  <div class="activity-content">
+                    <p class="activity-title">Nova mensagem de <strong>Carlos Oliveira</strong></p>
+                    <span class="activity-time">3 horas atrás</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon activity-icon-success">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="activity-content">
+                    <p class="activity-title"><strong>Ana Costa</strong> foi convertida em cliente</p>
+                    <span class="activity-time">5 horas atrás</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <a href="#" class="whatsapp-fab" id="whatsappBtn" aria-label="Agendar demonstração pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <div class="modal" id="whatsappModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </div>
+        <h3>Agendar Demonstração</h3>
+        <p>Preencha os dados abaixo e receba um atendimento personalizado via WhatsApp</p>
+      </div>
+      <form class="modal-form" id="whatsappForm">
+        <div class="form-group">
+          <label for="nome">Nome completo *</label>
+          <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" required placeholder="seu@email.com">
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone / WhatsApp *</label>
+          <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa">
+        </div>
+        <div class="form-group">
+          <label for="horario">Melhor horário para contato</label>
+          <select id="horario" name="horario">
+            <option value="">Selecione...</option>
+            <option value="manha">Manhã (9h - 12h)</option>
+            <option value="tarde">Tarde (13h - 18h)</option>
+            <option value="noite">Noite (18h - 21h)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Como podemos ajudar?</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva sua necessidade..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Enviar para WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
