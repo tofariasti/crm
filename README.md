@@ -80,6 +80,25 @@ Testado e otimizado para:
 - Progressive enhancement
 - Graceful degradation
 
+## 🎥 Vídeo Demonstrativo
+
+[![Demonstração CRM Pro](https://img.shields.io/badge/▶️-Assistir_Vídeo_Demo-FF0000?style=for-the-badge&logo=youtube)](https://youtube.com/your-video-id)
+
+**Vídeo completo mostrando:**
+- Dashboard com métricas e gráficos em tempo real
+- Gestão de leads com filtros e busca
+- Pipeline visual de vendas
+- Portfólio de clientes
+- Relatórios e analytics
+- Integração com WhatsApp
+- Responsividade total
+
+> 📹 *Vídeo em produção - em breve disponível!*
+> 
+> **Roteiro completo disponível em:** [`VIDEO_SCRIPT.md`](VIDEO_SCRIPT.md)
+
+---
+
 ## 📸 Screenshots
 
 ### Desktop - Dashboard Completo
