@@ -101,20 +101,51 @@ Testado e otimizado para:
 
 ## 📸 Screenshots
 
-### Desktop - Dashboard Completo
+### 💻 Desktop - Dashboard Completo
 ![Dashboard Desktop](screenshots/desktop-dashboard.png)
+*Dashboard com métricas em tempo real, gráficos interativos e timeline de atividades*
 
-### Tablet - Visualização Responsiva
-![Tablet View](screenshots/tablet-view.png)
+---
 
-### Mobile - Interface Móvel
-![Mobile View](screenshots/mobile-view.png)
+### 📋 Gestão de Leads
+![Leads Section](screenshots/leads-section.png)
+*Tabela completa com filtros, busca, badges de origem e status coloridos*
 
-### Modal WhatsApp
+---
+
+### 💰 Pipeline de Vendas
+![Pipeline de Vendas](screenshots/vendas-pipeline.png)
+*Visualização do funil de vendas com 5 estágios e cards de negócios*
+
+---
+
+### 👥 Portfólio de Clientes
+![Grid de Clientes](screenshots/clientes-grid.png)
+*Cards interativos com avatares personalizados e estatísticas por cliente*
+
+---
+
+### 📊 Relatórios e Analytics
+![Relatórios](screenshots/relatorios-analytics.png)
+*Gráficos de desempenho, rankings de produtos e métricas principais*
+
+---
+
+### 💬 Modal WhatsApp
 ![WhatsApp Modal](screenshots/whatsapp-modal.png)
+*Formulário completo para captura de leads via WhatsApp*
 
-### Gráficos Interativos
-![Charts](screenshots/charts.png)
+---
+
+### 📱 Versão Tablet
+![Tablet View](screenshots/tablet-view.png)
+*Interface adaptativa para tablets (768px - 1024px)*
+
+---
+
+### 📱 Versão Mobile
+![Mobile View](screenshots/mobile-view.png)
+*Layout totalmente responsivo para smartphones (375px - 425px)*
 
 ## 🚀 Como Usar
 
