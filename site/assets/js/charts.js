@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     createTeamPerformanceChart();
   }, 500);
   
+  setupReportsCharts();
+});
+
+function setupReportsCharts() {
   const navItems = document.querySelectorAll('.nav-item');
   navItems.forEach(item => {
     item.addEventListener('click', () => {
@@ -18,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-});
+}
 
 function createRevenueChart() {
   const ctx = document.getElementById('revenueChart');
